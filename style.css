@@ -1,0 +1,35 @@
+body {
+    background-color: #000000;
+}
+
+#btnAddTask {
+    background-color: #F0A500;
+    border: none;
+    border-radius: 10px;
+    width: 25%;
+    height: 30px;
+    color: white;
+    float: right;
+}
+
+.todo-task {
+    display: inline;
+}
+
+input[type="text"] {
+    color: white;
+    background-color: #334756;
+    width: 60%;
+    height: 25px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    color: white;
+    background-color: #334756;
+    width: 7%;
+    height: 25px;
+}
