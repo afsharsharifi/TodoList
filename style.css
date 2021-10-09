@@ -1,15 +1,24 @@
 body {
-    background-color: #000000;
+    background-color: #A2D2FF;
+}
+
+#btnAddTask,
+#txtNewTaskTitle {
+    background-color: #FF865E;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    color: white;
 }
 
 #btnAddTask {
-    background-color: #F0A500;
-    border: none;
-    border-radius: 10px;
+    font-size: 2vw;
     width: 25%;
-    height: 30px;
-    color: white;
-    float: right;
+}
+
+#txtNewTaskTitle {
+    font-size: 2vw;
+    width: 74%;
 }
 
 .todo-task {
