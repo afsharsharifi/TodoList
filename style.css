@@ -1,10 +1,10 @@
 body {
-    background-color: #A2D2FF;
+    background-color: #FDD2BF;
 }
 
 #btnAddTask,
 #txtNewTaskTitle {
-    background-color: #FF865E;
+    background-color: #290FBA;
     border: none;
     border-radius: 10px;
     height: 50px;
@@ -16,29 +16,32 @@ body {
     width: 25%;
 }
 
+#btnAddTask:hover {
+    background-color: #8236CB;
+}
+
 #txtNewTaskTitle {
     font-size: 2vw;
     width: 74%;
 }
 
-.todo-task {
-    display: inline;
+.done-task {
+    background-color: #FDD2BF;
 }
 
-input[type="text"] {
-    color: white;
-    background-color: #334756;
-    width: 60%;
-    height: 25px;
+a {
+    text-decoration: none;
 }
 
-input[type="text"]:focus {
-    outline: none;
+li {
+    padding: 3px;
+    margin: 5px;
+    list-style-type: circle;
+    border: 1px solid black;
+    color: #290FBA;
+    font-size: 2vw;
 }
 
-input[type="checkbox"] {
-    color: white;
-    background-color: #334756;
-    width: 7%;
-    height: 25px;
+li:hover {
+    background-color: #B97A95;
 }
