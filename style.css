@@ -2,46 +2,15 @@ body {
     background-color: #FDD2BF;
 }
 
-#btnAddTask,
+.header {
+    padding: 10px;
+}
+
 #txtNewTaskTitle {
-    background-color: #290FBA;
-    border: none;
-    border-radius: 10px;
-    height: 50px;
-    color: white;
+    border-radius: 25px;
+    text-indent: 30px;
 }
 
 #btnAddTask {
-    font-size: 2vw;
-    width: 25%;
-}
-
-#btnAddTask:hover {
-    background-color: #8236CB;
-}
-
-#txtNewTaskTitle {
-    font-size: 2vw;
-    width: 74%;
-}
-
-.done-task {
-    background-color: #FDD2BF;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    padding: 3px;
-    margin: 5px;
-    list-style-type: circle;
-    border: 1px solid black;
-    color: #290FBA;
-    font-size: 2vw;
-}
-
-li:hover {
-    background-color: #B97A95;
+    margin-left: -42px;
 }

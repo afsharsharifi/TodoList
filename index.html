@@ -7,32 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font MaterializeCSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-    <div class="header">
-        <input type="text" id="txtNewTaskTitle" placeholder="Enter a Task...">
-        <button id="btnAddTask" onclick="AddNewTask()">Add Task</button>
-    </div>
-    <hr>
-    <div>
-        <h3>Ongoing Task</h3>
-    </div>
-    <ul id="ongoing-task">
-        <a href="#">
-            <li class="todo-task">This is a Sample</li>
-        </a>
-    </ul>
+    <div class="row">
+        <div class="header">
+            <input class="white col s12" type="text" id="txtNewTaskTitle" placeholder="Enter a Task...">
+            <a class="btn btn-floating" id="btnAddTask" onclick="AddNewTask()"><i class="material-icons">add</i></a>
+        </div>
+        <div>
+            <h3>Ongoing Task</h3>
+        </div>
+        <ul id="ongoing-task">
+            <a href="#">
+                <li class="todo-task">This is a Sample</li>
+            </a>
+        </ul>
 
-    <div>
-        <h3>Done Task</h3>
+        <div>
+            <h3>Done Task</h3>
+        </div>
+        <ul id="already-done-task">
+            <a href="#">
+                <del><li class="done-task">This is a Sample</li></del>
+            </a>
+        </ul>
     </div>
-    <ul id="already-done-task">
-        <a href="#">
-            <del><li class="done-task">This is a Sample</li></del>
-        </a>
-    </ul>
     <script src="main.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
