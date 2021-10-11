@@ -1,9 +1,23 @@
 body {
-    background-color: #FDD2BF;
+    background-color: #11052C;
 }
 
 .header {
     padding: 10px;
+}
+
+.header-title {
+    margin-left: 40px;
+    color: #F43B86;
+}
+
+#ongoing-task,
+#already-done-task {
+    margin-left: 60px;
+}
+
+.a-task {
+    margin: 5px;
 }
 
 #txtNewTaskTitle {
@@ -12,5 +26,5 @@ body {
 }
 
 #btnAddTask {
-    margin-left: -42px;
+    margin-left: -40px;
 }

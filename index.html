@@ -14,28 +14,30 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="header">
-            <input class="white col s12" type="text" id="txtNewTaskTitle" placeholder="Enter a Task...">
-            <a class="btn btn-floating" id="btnAddTask" onclick="AddNewTask()"><i class="material-icons">add</i></a>
-        </div>
-        <div>
-            <h3>Ongoing Task</h3>
-        </div>
-        <ul id="ongoing-task">
-            <a href="#">
-                <li class="todo-task">This is a Sample</li>
-            </a>
-        </ul>
+    <div class="container">
+        <div class="row">
+            <div class="header">
+                <input class="white col s12" type="text" id="txtNewTaskTitle" placeholder="Enter a Task...">
+                <a class="btn btn-floating" id="btnAddTask" onclick="AddNewTask()"><i class="material-icons">add</i></a>
+            </div>
+            <div>
+                <h4 class="header-title">Ongoing Task</h4>
+            </div>
+            <ul id="ongoing-task">
+                <a href="#" class="a-task col s12 btn pink darken-2">
+                    <li class="todo-task left-align">This is a Sample</li>
+                </a>
+            </ul>
 
-        <div>
-            <h3>Done Task</h3>
+            <div>
+                <h4 class="header-title">Done Task</h4>
+            </div>
+            <ul id="already-done-task">
+                <a href="#" class="col s12 btn pink lighten-5 black-text">
+                    <del><li class="todo-task left-align">This is a Sample</li></del>
+                </a>
+            </ul>
         </div>
-        <ul id="already-done-task">
-            <a href="#">
-                <del><li class="done-task">This is a Sample</li></del>
-            </a>
-        </ul>
     </div>
     <script src="main.js"></script>
     <!-- Compiled and minified JavaScript -->

@@ -7,7 +7,11 @@ function AddNewTask() {
     var allTask = document.getElementById("ongoing-task")
     var newTaskTitle = document.getElementById("txtNewTaskTitle").value
     if (newTaskTitle != "") {
-        allTask.innerHTML += '<a href="#"><li class="todo-task">' + newTaskTitle + '</li></a>'
+        allTask.innerHTML += '<a href="#" class="a-task col s12 btn pink darken-2"><li class="todo-task left-align">' + newTaskTitle + '</li></a>'
         document.getElementById("txtNewTaskTitle").value = ""
     }
+}
+
+function DoneThisTask() {
+    var this_task = document.getElementsByClassName("todo-task")
 }
