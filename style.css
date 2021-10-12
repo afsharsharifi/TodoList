@@ -1,30 +1,56 @@
 body {
-    background-color: #11052C;
+    background-color: white;
+    color: black;
 }
 
-.header {
+header {
+    color: #25b99a;
+    font-size: 4vw;
+    text-align: center;
+}
+
+footer {
+    color: #25b99a;
+    font-size: 2vw;
+    text-align: center;
+}
+
+li {
+    direction: rtl;
+    margin: 10px;
     padding: 10px;
 }
 
-.header-title {
-    margin-left: 40px;
-    color: #F43B86;
+li:hover {
+    background-color: #8a8585;
 }
 
-#ongoing-task,
-#already-done-task {
-    margin-left: 60px;
+.tasks {
+    cursor: pointer;
+    color: black;
 }
 
-.a-task {
-    margin: 5px;
+.tasks:hover {
+    cursor: pointer;
+    color: green;
 }
 
-#txtNewTaskTitle {
-    border-radius: 25px;
-    text-indent: 30px;
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1;
+    /* Firefox */
 }
 
-#btnAddTask {
-    margin-left: -40px;
+@media only screen and (max-width: 600px) {
+    header {
+        color: #25b99a;
+        font-size: 7vw;
+        text-align: center;
+    }
+    footer {
+        color: #25b99a;
+        font-size: 4vw;
+        text-align: center;
+    }
 }
