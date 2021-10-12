@@ -16,27 +16,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="header">
-                <input class="white col s12" type="text" id="txtNewTaskTitle" placeholder="Enter a Task...">
-                <a class="btn btn-floating" id="btnAddTask" onclick="AddNewTask()"><i class="material-icons">add</i></a>
+            <header>Todo Manager</header> <br>
+            <div class="InputFiled">
+                <input id="txtNewTask" class="col s10 l11" type="text" placeholder="Add a new Task">
+                <button id="btnAddTask" class="btn col s2 l1" disabled><i class="material-icons">add</i></button>
             </div>
-            <div>
-                <h4 class="header-title">Ongoing Task</h4>
-            </div>
-            <ul id="ongoing-task">
-                <a href="#" class="a-task col s12 btn pink darken-2">
-                    <li class="todo-task left-align">This is a Sample</li>
-                </a>
-            </ul>
 
-            <div>
-                <h4 class="header-title">Done Task</h4>
-            </div>
-            <ul id="already-done-task">
-                <a href="#" class="col s12 btn pink lighten-5 black-text">
-                    <del><li class="todo-task left-align">This is a Sample</li></del>
-                </a>
+            <ul class="todoList col s12">
             </ul>
+            <footer class="footer">
+                <span>You Have <span class="pendingTask"></span> Tasks to do</span>
+                <button class="btn">Done All <span><i class="material-icons right">done_all</i></span></button>
+            </footer>
         </div>
     </div>
     <script src="main.js"></script>
