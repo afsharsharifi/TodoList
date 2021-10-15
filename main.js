@@ -44,7 +44,7 @@ function ShowTask() {
 
     let newLiTag = ''
     listArr.forEach((item, index) => {
-        newLiTag += `<li> ${item} <span onclick = "DoneTask(${index})"><i class="tasks material-icons right">check</i></span></li>`
+        newLiTag += `<li> ${item} <span onclick = "DoneTask(${index})"><i class="tasks material-icons circle right">check</i></span></li>`
     });
     todoList.innerHTML = newLiTag
     inputBox.value = ""

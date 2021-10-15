@@ -26,13 +26,15 @@ li:hover {
 }
 
 .tasks {
+    background-color: #25b99a;
     cursor: pointer;
     color: black;
+    padding: 2px;
 }
 
 .tasks:hover {
     cursor: pointer;
-    color: green;
+    background-color: greenyellow;
 }
 
 ::placeholder {
