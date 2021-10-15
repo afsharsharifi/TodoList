@@ -1,16 +1,20 @@
-const inputBox = document.querySelector(".InputFiled input")
-const addBtn = document.querySelector(".InputFiled button")
-const todoList = document.querySelector(".todoList")
-const deleteAllBtn = document.querySelector(".footer button")
+// const inputBox = document.querySelector(".NewTask input")
+// const addBtn = document.querySelector(".NewTask button")
+// const todoList = document.querySelector(".todoList")
+// const deleteAllBtn = document.querySelector(".footer button")
+const txtNewTask = document.getElementById("txtNewTask")
+const btnAddTask = document.getElementById("btnAddTask")
+const OngingTask = document.getElementById("Onging-Task")
+const btnDoneAll = document.getElementById("btnDoneAll")
 
 
-inputBox.onkeyup = () => {
-    let userData = inputBox.value
+txtNewTask.onkeyup = () => {
+    let NewTaskUser = txtNewTask.value
 
-    if (userData.trim() != 0) {
-        document.querySelector(".InputFiled button").disabled = false
+    if (NewTaskUser.trim() != 0) {
+        document.getElementById("btnAddTask").disabled = false
     } else {
-        document.querySelector(".InputFiled button").disabled = true
+        document.getElementById("btnAddTask").disabled = true
     }
 }
 
@@ -18,50 +22,50 @@ inputBox.onkeyup = () => {
 ShowTask()
 
 
-addBtn.onclick = () => {
-    let userData = inputBox.value
-    let getLocalStorage = localStorage.getItem("New Todo")
+btnAddTask.onclick = () => {
+    let NewTaskUser = txtNewTask.value
+    let getLocalStorage = localStorage.getItem("Ongoing Tasks")
     if (getLocalStorage == null) {
-        listArr = []
+        TaskList = []
     } else {
-        listArr = JSON.parse(getLocalStorage)
+        TaskList = JSON.parse(getLocalStorage)
     }
-    listArr.push(userData)
-    localStorage.setItem("New Todo", JSON.stringify(listArr))
+    TaskList.push(NewTaskUser)
+    localStorage.setItem("Ongoing Tasks", JSON.stringify(TaskList))
     ShowTask()
 }
 
 function ShowTask() {
-    let getLocalStorage = localStorage.getItem("New Todo")
+    let getLocalStorage = localStorage.getItem("Ongoing Tasks")
     if (getLocalStorage == null) {
-        listArr = []
+        TaskList = []
     } else {
-        listArr = JSON.parse(getLocalStorage)
+        TaskList = JSON.parse(getLocalStorage)
     }
-    const pendingNum = document.querySelector(".pendingTask")
-    pendingNum.textContent = listArr.length
+    const PendingTask = document.getElementById("pendingTask")
+    PendingTask.textContent = TaskList.length
 
 
     let newLiTag = ''
-    listArr.forEach((item, index) => {
+    TaskList.forEach((item, index) => {
         newLiTag += `<li> ${item} <span onclick = "DoneTask(${index})"><i class="tasks material-icons circle right">check</i></span></li>`
     });
-    todoList.innerHTML = newLiTag
-    inputBox.value = ""
-    document.querySelector(".InputFiled button").disabled = true
+    OngingTask.innerHTML = newLiTag
+    txtNewTask.value = ""
+    document.getElementById("btnAddTask").disabled = true
 }
 
 function DoneTask(index) {
-    let getLocalStorage = localStorage.getItem("New Todo")
-    listArr = JSON.parse(getLocalStorage)
-    listArr.splice(index, 1)
-    localStorage.setItem("New Todo", JSON.stringify(listArr))
+    let getLocalStorage = localStorage.getItem("Ongoing Tasks")
+    TaskList = JSON.parse(getLocalStorage)
+    TaskList.splice(index, 1)
+    localStorage.setItem("Ongoing Tasks", JSON.stringify(TaskList))
     ShowTask()
 }
 
-deleteAllBtn.onclick = () => {
-    listArr = []
-    localStorage.setItem("New Todo", JSON.stringify(listArr))
+btnDoneAll.onclick = () => {
+    TaskList = []
+    localStorage.setItem("Ongoing Tasks", JSON.stringify(TaskList))
     ShowTask()
 }
 

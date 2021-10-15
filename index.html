@@ -17,16 +17,16 @@
     <div class="container">
         <div class="row">
             <header>Todo Manager</header> <br>
-            <div class="InputFiled">
+            <div class="NewTask">
                 <input id="txtNewTask" class="col s10 l11" type="text" placeholder="Add a new Task">
                 <button id="btnAddTask" class="btn col s2 l1" disabled><i class="material-icons">add</i></button>
             </div>
 
-            <ul class="todoList col s12">
+            <ul id="Onging-Task" class="todoList col s12">
             </ul>
             <footer class="footer">
-                <span>You Have <span class="pendingTask"></span> Tasks to do</span>
-                <button class="btn">Done All <span><i class="material-icons right">done_all</i></span></button>
+                <span>You Have <span id="pendingTask"></span> Tasks to do</span>
+                <button id="btnDoneAll" class="btn">Done All <span><i class="material-icons right">done_all</i></span></button>
             </footer>
         </div>
     </div>

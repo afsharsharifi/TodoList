@@ -37,6 +37,10 @@ li:hover {
     background-color: greenyellow;
 }
 
+.tasks:active {
+    background-color: greenyellow;
+}
+
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: red;
